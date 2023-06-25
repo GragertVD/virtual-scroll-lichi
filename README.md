@@ -1,5 +1,5 @@
 # Catalog. Virtual scroll (Next js)
-["demo"](https://print-speed.vercel.app/).
+[demo](https://virtual-scroll-lichi.vercel.app/).
 
 **Требования:**
 
@@ -20,7 +20,7 @@
 Экспорт проекта локально на компьютер:
 
 ```
-git clone https://github.com/GragertVD/print-speed.git
+git clone https://github.com/GragertVD/virtual-scroll-lichi.git
 ```
 
 Для установки зависимостей:
@@ -37,4 +37,4 @@ npm start
 
 ## Demo
 
-Посмотреть приложение в действии можно на [Versel](https://print-speed.vercel.app/)
+Посмотреть приложение в действии можно на [Versel](https://virtual-scroll-lichi.vercel.app/)

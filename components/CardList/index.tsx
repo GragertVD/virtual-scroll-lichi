@@ -8,13 +8,16 @@ interface IpropsCardList {
 }
 
 const CardList: FC<IpropsCardList> = ({ arrayProduct }) => (
-  <div className={styles.wrapper}>
-    {
-      arrayProduct.map((product) =>
-        <CardItem key={product.id} product={product} />
-      )
-    }
-  </div>
+  <>
+    <h1 style={{ display: "none" }}>{arrayProduct[0].category_name}</h1>
+    <div className={styles.wrapper}>
+      {
+        arrayProduct.map((product) =>
+          <CardItem key={product.id} product={product} />
+        )
+      }
+    </div>
+  </>
 )
   ;
 
