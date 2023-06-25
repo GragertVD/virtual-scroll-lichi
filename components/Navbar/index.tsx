@@ -11,14 +11,14 @@ const navigation = [
   { id: 3, title: 'Платья', path: '/category/clothes' },
 ];
 
-const Navbar:FC = () => {
+const Navbar: FC = () => {
   const router = useRouter();
 
   return (
     <nav className={styles.nav}>
       <div className={styles.links}>
         {navigation.map(({ id, title, path }) => (
-          <Link className={'/category/'+router.query.category === path ? styles.active : ""} key={id} href={path}>
+          <Link className={router.asPath === path ? styles.active : ""} key={id} href={path}>
             {title}
           </Link>
         ))}
