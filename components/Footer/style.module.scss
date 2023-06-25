@@ -1,0 +1,21 @@
+
+.footer {
+  background-image: linear-gradient(to bottom,
+      rgba(189, 189, 189, 0.192),
+      rgba(112, 112, 112, 0.5));
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  flex-direction: column;
+}
+
+.contacts {
+  display: flex;
+  gap: 8px;  
+  a{
+    color: black;
+  }
+}

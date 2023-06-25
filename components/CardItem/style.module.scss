@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  // flex: 1 0 280px;
+  flex: 1 0 280px;
+
+
+  overflow: hidden;
+
+  transition: opacity 1s;
+
+  contain: layout;
+
+  img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  div {
+    text-align: center;
+  }
+}
+
+
+.opacity_1 {
+  opacity: 1;
+}
+
+.opacity_0 {
+  opacity: 0;
+
+  /* 1:1 Aspect Ratio */
+  // &:before {
+  //   content: "";
+  //   position: relative;
+  //   top: 0;
+  //   display: block;
+  //   padding-top: 100%;
+  //   /* initial ratio of 1:1*/
+  // }
+}
