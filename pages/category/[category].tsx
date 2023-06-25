@@ -31,12 +31,12 @@ const Category: FC<PropsCategory> = ({ propsProducts }) => {
     setProducts(propsProducts);
   }, [propsProducts]);
 
-  //
+  //для отслеживания видимости конца выведенных карточек 
   const { ref, inView } = useInView({
     threshold: 0,
   });
 
-
+  //При прокручивании до конца выведенных товаров, догружаем новые
   useEffect(() => {
     const fetchData = async () => {
       
@@ -55,7 +55,7 @@ const Category: FC<PropsCategory> = ({ propsProducts }) => {
 
   }, [inView])
 
-
+  //если нет продуктов, то выводим просто сообщение об этом
   if (products?.aProduct.length === 0)
     return <h1>Товаров в этой категории нет</h1>
 

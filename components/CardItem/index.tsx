@@ -8,13 +8,15 @@ interface IpropsCardItem {
 }
 
 const CardItem: FC<IpropsCardItem> = ({ product }) => {
+  
+  //Хук для отслеживания видимости карточки
   const { ref, inView } = useInView({
     threshold: 0,
   });
 
   return (
     <div ref={ref} className={`${styles.wrapper} ${inView ? styles.opacity_1 : styles.opacity_0}`} >
-      <img  src={inView ? product.photos[0].big : '/dress.jpg'} alt={product.name} />
+      <img loading="lazy" decoding="async" src={inView ? product.photos[0].big : '/dress.jpg'} alt={product.name} />
       <div>
         <h2>{product.name}</h2>
         <p>{product.format_price[1]}</p>
@@ -22,5 +24,5 @@ const CardItem: FC<IpropsCardItem> = ({ product }) => {
     </div>
   )
 };
-//loading="lazy" decoding="async" 
+
 export default CardItem;
